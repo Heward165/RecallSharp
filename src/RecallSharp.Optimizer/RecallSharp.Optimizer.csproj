@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+    <PackageId>RecallSharp.Optimizer</PackageId>
+    <Version>0.1.0-preview.1</Version>
+    <Title>RecallSharp Optimizer</Title>
+    <Authors>Valdo Vansley</Authors>
+    <Description>Dependency-free FSRS-6 parameter fitting, held-out evaluation, bootstrap uncertainty, and review-log interoperability for RecallSharp.</Description>
+    <PackageTags>fsrs;spaced-repetition;optimizer;flashcards;learning;calibration</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Heward165/RecallSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Heward165/RecallSharp</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageReleaseNotes>Deterministic bounded fitting with held-out evaluation, bootstrap intervals, and portable review histories.</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../RecallSharp/RecallSharp.csproj" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <RootNamespace>RecallSharp</RootNamespace>
+    <AssemblyName>RecallSharp</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>RecallSharp</PackageId>
+    <Version>0.1.0-preview.1</Version>
+    <Title>RecallSharp</Title>
+    <Authors>Valdo Vansley</Authors>
+    <Description>A dependency-free FSRS-6 scheduling library for C#.</Description>
+    <PackageTags>fsrs;spaced-repetition;scheduler;flashcards;learning;memory</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Heward165/RecallSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Heward165/RecallSharp</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageReleaseNotes>Version-explicit FSRS-6 scheduling, four-rating previews, SM-2 migration, and expanded verification.</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

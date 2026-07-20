@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet restore RecallSharp.slnx
+      - run: dotnet build RecallSharp.slnx -c Release --no-restore
+      - run: dotnet test tests/RecallSharp.Tests -c Release --no-build
+      - run: dotnet run --project tests/RecallSharp.Conformance -c Release --no-build
+      - run: dotnet pack src/RecallSharp/RecallSharp.csproj -c Release --no-build -o artifacts/packages
+      - run: dotnet pack src/RecallSharp.Optimizer/RecallSharp.Optimizer.csproj -c Release --no-build -o artifacts/packages
+      - name: Publish to NuGet when configured
+        shell: bash
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: |
+          if [ -n "$NUGET_API_KEY" ]; then
+            for package in artifacts/packages/*.nupkg; do
+              dotnet nuget push "$package" --api-key "$NUGET_API_KEY" --source https://api.nuget.org/v3/index.json --skip-duplicate
+            done
+          fi
+      - name: Create GitHub prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" artifacts/packages/*.*nupkg --prerelease --generate-notes --verify-tag

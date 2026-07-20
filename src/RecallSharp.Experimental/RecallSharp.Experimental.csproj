@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <RootNamespace>RecallSharp.Fsrs7.Experimental</RootNamespace>
+    <AssemblyName>RecallSharp.Fsrs7.Experimental</AssemblyName>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>
+    <PackageId>RecallSharp.Fsrs7.Experimental</PackageId>
+    <Version>0.2.0-preview.1</Version>
+    <Title>RecallSharp FSRS-7 Experimental</Title>
+    <Authors>Valdo Vansley</Authors>
+    <Description>An experimental dependency-free C# implementation of the FSRS-7 memory model.</Description>
+    <PackageTags>fsrs;fsrs-7;spaced-repetition;scheduler;experimental</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Heward165/RecallSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Heward165/RecallSharp</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageReleaseNotes>Experimental FSRS-7 mixed forgetting curve, fractional intervals, and 35-parameter transitions.</PackageReleaseNotes>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../RecallSharp/RecallSharp.csproj" />
+    <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301" PrivateAssets="All" />
+  </ItemGroup>
+</Project>

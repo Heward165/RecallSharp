@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="src/RecallSharp/RecallSharp.csproj" />
+  <Project Path="src/RecallSharp.Experimental/RecallSharp.Experimental.csproj" />
+  <Project Path="src/RecallSharp.Analytics/RecallSharp.Analytics.csproj" />
+  <Project Path="src/RecallSharp.Optimizer/RecallSharp.Optimizer.csproj" />
+  <Project Path="examples/RecallSharp.Example/RecallSharp.Example.csproj" />
+  <Project Path="benchmarks/RecallSharp.Benchmarks/RecallSharp.Benchmarks.csproj" />
+  <Project Path="tools/RecallSharp.Reference/RecallSharp.Reference.csproj" />
+  <Project Path="tests/RecallSharp.Conformance/RecallSharp.Conformance.csproj" />
+  <Project Path="tests/RecallSharp.Tests/RecallSharp.Tests.csproj" />
+</Solution>
