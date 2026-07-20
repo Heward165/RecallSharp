@@ -21,6 +21,8 @@ jobs:
       - run: dotnet run --project tests/RecallSharp.Conformance -c Release --no-build
       - run: dotnet pack src/RecallSharp/RecallSharp.csproj -c Release --no-build -o artifacts/packages
       - run: dotnet pack src/RecallSharp.Optimizer/RecallSharp.Optimizer.csproj -c Release --no-build -o artifacts/packages
+      - run: dotnet pack src/RecallSharp.Analytics/RecallSharp.Analytics.csproj -c Release --no-build -o artifacts/packages
+      - run: dotnet pack src/RecallSharp.Experimental/RecallSharp.Experimental.csproj -c Release --no-build -o artifacts/packages
       - name: Publish to NuGet when configured
         shell: bash
         env:

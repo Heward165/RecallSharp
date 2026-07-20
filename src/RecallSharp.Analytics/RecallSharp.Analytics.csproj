@@ -6,15 +6,28 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <PackageId>RecallSharp.Analytics</PackageId>
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <Title>RecallSharp Analytics</Title>
     <Authors>Valdo Vansley</Authors>
     <Description>Deterministic deck simulation and retention-policy analysis for RecallSharp.</Description>
     <PackageTags>fsrs;simulation;retention;spaced-repetition</PackageTags>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Heward165/RecallSharp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Heward165/RecallSharp</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(CI)' == 'true'">true</ContinuousIntegrationBuild>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <PackageReleaseNotes>Deterministic workload simulation, retention-policy comparison, and reproducible analytical reports.</PackageReleaseNotes>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../RecallSharp/RecallSharp.csproj" />
     <None Include="../../README.md" Pack="true" PackagePath="/" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.301" PrivateAssets="All" />
   </ItemGroup>
 </Project>

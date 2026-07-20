@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <PackageId>RecallSharp.Fsrs7.Experimental</PackageId>
-    <Version>0.2.0-preview.1</Version>
     <Title>RecallSharp FSRS-7 Experimental</Title>
     <Authors>Valdo Vansley</Authors>
     <Description>An experimental dependency-free C# implementation of the FSRS-7 memory model.</Description>

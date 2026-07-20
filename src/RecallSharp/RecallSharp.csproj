@@ -6,7 +6,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IsPackable>true</IsPackable>
     <PackageId>RecallSharp</PackageId>
-    <Version>0.1.0-preview.1</Version>
     <Title>RecallSharp</Title>
     <Authors>Valdo Vansley</Authors>
     <Description>A dependency-free FSRS-6 scheduling library for C#.</Description>
